@@ -1,0 +1,17 @@
+{
+  "name": "js-runtime",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npm run antlr4-js",
+    "antlr4-js": "java -Xmx500M -cp '/usr/local/lib/antlr-4.10.1-complete.jar:$CLASSPATH' org.antlr.v4.Tool -Dlanguage=JavaScript -lib grammars -o lib -visitor -Xexact-output-dir grammars/ECMAScript.g4",
+    "dev": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antlr4": "^4.10.1"
+  }
+}
